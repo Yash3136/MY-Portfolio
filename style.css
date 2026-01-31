@@ -78,11 +78,7 @@ section{
     display: none;
 }
 
-@media (max-width: 500px){
-  #manu-icon{
-    display: flex;
-  }
-}
+
 
 .home{
     display: flex;
@@ -350,42 +346,7 @@ a {
 
 
 
-/** ================
- * Responsive
- ===================*/
- @media only screen and (min-width: 768px) and (max-width: 959px) {
- 	.pricing-wrapper {
- 		width: 768px;
- 	}
 
- 	.pricing-table {
- 		width: 236px;
- 	}
-	
-	.table-list li {
-		font-size: 10rem;
-	}
-
- }
-
- @media only screen and (max-width: 767px) {
- 	.pricing-wrapper {
- 		width: 420px;
- 	}
-
- 	.pricing-table {
- 		display: block;
- 		float: none;
- 		margin: 0 0 20px 0;
- 		width: 100%;
- 	}
- }
-
-@media only screen and (max-width: 479px) {
-	.pricing-wrapper {
-		width: 300px;
-	}
-} 
 
 /* Education Section CSS end*/
 
@@ -615,30 +576,7 @@ ul {
 /* MEDIA QUERIES */
 /* ------------- */
 
-@media only screen and (min-width: 700px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
 
-  .wrapper > * {
-    padding: 2em;
-  }
-
-  .company-info {
-    border-radius: 4px 0 0 4px;
-  }
-
-  .contact {
-    border-radius: 0 4px 4px 0;
-  }
-
-  .company-info h3,
-  .company-info ul,
-  .brand {
-    text-align: left;
-  }
-}
 
 
 /* social media icons styling */
