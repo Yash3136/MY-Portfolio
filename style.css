@@ -258,31 +258,33 @@ a {
 }
 
 
-.clearfix:after {
-	content: '';
-	display: block;
-	height: 0;
-	width: 0;
-	clear: both;
-}
+
 /** ========================
  * Contenedor
  ============================*/
 .pricing-wrapper {
-	width: 960px;
+	width: 100%;
+  max-width: 1100px;
 	margin: 40px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 2%;
 }
 
 .pricing-table {
-	margin: 0 10px;
-	text-align: center;
-	width: 220px;
-	float: left;
-	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.4);
-	box-shadow: 0 0 15px rgba(0,0,0,0.4);
-	-webkit-transition: all 0.25s ease;
-	-o-transition: all 0.25s ease;
-	transition: all 0.25s ease;
+    margin: 0;
+    text-align: center;
+    width: 250px; /* কার্ডের সাইজ নির্দিষ্ট করা হলো */
+    flex-shrink: 0;
+    background: var(--second-bg-color);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+}
+
+.clearfix:after {
+    display: none;
 }
 
 .pricing-table:hover {
@@ -296,7 +298,7 @@ a {
 	color: #FFF;
 	background: #e95846;
 	padding: 20px 0;
-	font-size: 4em;
+	font-size:2.5rem;
 	text-transform: uppercase;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.4);
 }
@@ -311,9 +313,13 @@ a {
 
 .pricing-table .price {
 	background: #403e3d;
-	font-size: 3em;
+	font-size: 1.8rem;
+  min-height: 80px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
 	font-weight: 600;
-	padding: 20px 0;
+	padding: 10px;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.4);
 }
 
@@ -324,7 +330,7 @@ a {
 }
 
 .table-list li {
-	font-size: 2em;
+	font-size: 1.4rem;
 	font-weight: 700;
 	padding: 12px 8px;
     text-align: center;
@@ -735,4 +741,29 @@ ul {
     }
 }
 
+/* --- রেসপনসিভ মিডিয়া কুয়েরি (Education এর জন্য) --- */
+
+@media (max-width: 991px) {
+    .pricing-wrapper {
+        width: 100%;
+        gap: 15px;
+    }
+    .pricing-table {
+        width: calc(45% - 20px); /* ট্যাবলেটে পাশাপাশি ২টি করে থাকবে */
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-table {
+        width: 90%; /* মোবাইলে একটি করে বড় কার্ড দেখাবে */
+    }
+    
+    .pricing-table-title {
+        font-size: 2rem;
+    }
+
+    .table-list li {
+        font-size: 1.6rem; /* মোবাইলে পড়ার সুবিধার জন্য */
+    }
+}
 
