@@ -718,3 +718,83 @@ ul {
 }
 
 
+/* --- Responsive Media Queries --- */
+
+/* বড় ট্যাবলেটের জন্য (991px এর নিচে) */
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 4%;
+    }
+    section {
+        padding: 10rem 4% 2rem;
+    }
+}
+
+/* ছোট ট্যাবলেট ও ফোনের জন্য (768px এর নিচে) */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block; /* মেনু আইকন দেখাবে */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        display: none; /* জাভাস্ক্রিপ্ট ছাড়া হাইড থাকবে */
+    }
+
+    /* হোম সেকশন ফিক্স */
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-content {
+        width: 100%;
+        margin-left: 0;
+        padding-top: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 3rem;
+    }
+
+    /* অ্যাবাউট সেকশন ফিক্স */
+    .about {
+        flex-direction: column;
+    }
+
+    .about-img img {
+        width: 80vw;
+    }
+
+    /* কুকিং সেকশন গ্রিড ফিক্স */
+    .food-container {
+        flex-direction: column;
+    }
+    
+    .img-container {
+        margin-bottom: 2rem;
+    }
+}
+
+/* ছোট ফোনের জন্য (450px এর নিচে) */
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .contact form {
+        grid-template-columns: 1fr; /* কন্টাক্ট ফর্ম এক কলামে আসবে */
+    }
+
+    .contact form .full {
+        grid-column: 1 / 2;
+    }
+}
+
+
